@@ -8,4 +8,6 @@ import lombok.Data;
 public class Result {
     private Object result;
     private long executionTime;
+    private String methodName;
+    private String arguments;
 }

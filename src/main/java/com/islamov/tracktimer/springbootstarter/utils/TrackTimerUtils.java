@@ -4,6 +4,8 @@ import com.islamov.tracktimer.springbootstarter.model.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 
+import java.util.Arrays;
+
 @Slf4j
 public class TrackTimerUtils {
 
@@ -27,6 +29,6 @@ public class TrackTimerUtils {
 
         log.info("Метод {} выполняется за {} мс", methodName, executionTime);
 
-        return new Result(result, executionTime);
+        return new Result(result, executionTime, methodName, Arrays.toString(methodArgs));
     }
 }
