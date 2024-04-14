@@ -30,4 +30,8 @@ public class ExecutionTimeService {
     public void save(ExecutionTime executionTime){
         executionTimeRepository.save(executionTime);
     }
+
+    public ExecutionTime getExecutionTime(String nameMethod){
+        return  executionTimeRepository.getExecutionTimeByNameMethod(nameMethod);
+    }
 }

@@ -20,4 +20,6 @@ public interface ExecutionTimeRepository extends JpaRepository<ExecutionTime, Lo
             "from ExecutionTime " +
             "where id = (select MAX(id) from ExecutionTime where nameMethod = :nameMethod)")
     Long getLastExecutionTime(@Param("nameMethod") String nameMethod);
+
+    ExecutionTime getExecutionTimeByNameMethod(String nameMethod);
 }

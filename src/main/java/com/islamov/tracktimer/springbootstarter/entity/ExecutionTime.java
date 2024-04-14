@@ -10,7 +10,7 @@ public class ExecutionTime {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(name = "name_method")
     private String nameMethod;
